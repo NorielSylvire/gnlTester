@@ -31,11 +31,11 @@ BONUS					= bonus
 
 EXTRA_INFO =
 ifdef EXTRA_INFO
-EXTRA_INFO = -D EXTRA_INFO
+EXTRA_INF = -D EXTRA_INFO
 endif
 
-CFLAGS					= -g3 -Wall -Wextra -Werror $(EXTRA_INFO)
-CPPFLAGS				= -g3 -ldl -std=c++11 -I utils/ -I.. -Wno-everything $(EXTRA_INFO)
+CFLAGS					= -g3 -Wall -Wextra -Werror $(EXTRA_INF)
+CPPFLAGS				= -g3 -ldl -std=c++11 -I utils/ -I.. -Wno-everything $(EXTRA_INF)
 
 UNAME = $(shell uname -s)
 ifeq ($(UNAME), Linux)
