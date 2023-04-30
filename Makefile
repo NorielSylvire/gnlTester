@@ -29,8 +29,13 @@ BONUS					= bonus
 42BONUS					= $(addprefix 42, $(BONUS))
 10MBONUS				= $(addprefix 10M, $(BONUS))
 
-CFLAGS					= -g3 -Wall -Wextra -Werror
-CPPFLAGS				= -g3 -ldl -std=c++11 -I utils/ -I.. -Wno-everything
+EXTRA_INFO =
+ifdef EXTRA_INFO
+EXTRA_INFO = -D EXTRA_INFO
+endif
+
+CFLAGS					= -g3 -Wall -Wextra -Werror $(EXTRA_INFO)
+CPPFLAGS				= -g3 -ldl -std=c++11 -I utils/ -I.. -Wno-everything $(EXTRA_INFO)
 
 UNAME = $(shell uname -s)
 ifeq ($(UNAME), Linux)
