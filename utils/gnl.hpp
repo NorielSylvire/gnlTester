@@ -39,5 +39,8 @@
 	}
 
 void gnl(int fd, char const *s);
+# ifdef EXTRA_INFO
+void extra_info(char const * actualReturn, char const * expectedReturn);
+# endif
 
 #endif
